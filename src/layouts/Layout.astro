@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css'
+import '@fontsource-variable/open-sans'
+import openSansWoff2 from '@fontsource-variable/open-sans/files/open-sans-latin-wght-normal.woff2?url'
 ---
 
 <!doctype html>
@@ -8,8 +10,24 @@ import '../styles/global.css'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={openSansWoff2}
+      crossorigin="anonymous"
+    />
     <title>Proyecto Ciudades Hermanas</title>
+    <meta
+      name="description"
+      content="Proyecto de ayuda social que conecta comunidades entre México y Estados Unidos"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <slot />
@@ -18,7 +36,7 @@ import '../styles/global.css'
 
 <style>
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Open Sans Variable', system-ui, sans-serif;
     scroll-behavior: smooth;
   }
 

@@ -1,0 +1,131 @@
+---
+// ProjectSection component - Sección del proyecto principal
+import { User } from '@lucide/astro'
+---
+
+<section id="proyecto" class="section-padding">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h3 class="text-4xl font-bold mb-6 text-gray-800">
+        Proyecto Ciudades Hermanas
+      </h3>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+        Convenio firmado el 20 de septiembre de 2024 entre el Alcalde de Newark,
+        Sr. Ras Barakas, y el Alcalde del Cantón Chunchi, Sr. Frantz Joseph
+        Narváez
+      </p>
+    </div>
+    <!-- Gestores del Proyecto -->
+    <div class="bg-primary-blue/5 rounded-2xl p-8 mb-12">
+      <h4 class="text-2xl font-semibold mb-6 text-center text-primary-blue">
+        Gestores del Proyecto
+      </h4>
+      <div class="grid md:grid-cols-2 gap-8 text-center">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="flex items-center justify-center mb-4">
+            <div class="bg-primary-blue/10 p-3 rounded-full">
+              <User size={32} class="text-primary-blue" />
+            </div>
+          </div>
+          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+            Sandra Aguirre Solórzano
+          </h5>
+          <p class="text-gray-600">Artista Plástica Chuncheña</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="flex items-center justify-center mb-4">
+            <div class="bg-primary-blue/10 p-3 rounded-full">
+              <User size={32} class="text-primary-blue" />
+            </div>
+          </div>
+          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+            Rodrigo Machado Erazo
+          </h5>
+          <p class="text-gray-600">Co-gestor del Proyecto</p>
+        </div>
+      </div>
+    </div>
+    <!-- Boletín Informativo -->
+    <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+      <h4 class="text-2xl font-semibold mb-6 text-center text-gray-800">
+        📰 Boletín Informativo Oficial
+      </h4>
+      <div class="text-center">
+        <p class="text-gray-600 mb-6">
+          Conoce los detalles oficiales del acuerdo entre Newark y Chunchi
+        </p>
+        <div class="max-w-4xl mx-auto">
+          <img
+            src="/imagenes/boletin.webp"
+            alt="Boletín Informativo - Acuerdo Newark-Chunchi"
+            class="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyectos del Convenio -->
+    <div>
+      <h4 class="text-3xl font-bold mb-8 text-center text-gray-800">
+        Proyectos Contemplados en el Convenio
+      </h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-blue text-3xl mb-4">🎓</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Intercambios Educativos
+          </h5>
+          <p class="text-gray-600">
+            Intercambios educativos, culturales y científicos entre ambas
+            ciudades
+          </p>
+        </div>
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-green text-3xl mb-4">🏺</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Proyectos Productivos
+          </h5>
+          <p class="text-gray-600">
+            Desarrollo de proyectos productivos y artesanales locales
+          </p>
+        </div>
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-blue text-3xl mb-4">🌱</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Proyectos Ecológicos
+          </h5>
+          <p class="text-gray-600">
+            Iniciativas de protección del medio ambiente y sostenibilidad
+          </p>
+        </div>
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-red text-3xl mb-4">🏖️</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Proyectos Turísticos
+          </h5>
+          <p class="text-gray-600">
+            Promoción del turismo y desarrollo de destinos turísticos
+          </p>
+        </div>
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-green text-3xl mb-4">📦</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Exportaciones
+          </h5>
+          <p class="text-gray-600">
+            Facilitación de exportaciones y comercio internacional
+          </p>
+        </div>
+        <div class="card p-6 hover:shadow-lg transition-all">
+          <div class="text-primary-blue text-3xl mb-4">📚</div>
+          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+            Capacitaciones
+          </h5>
+          <p class="text-gray-600">
+            Capacitaciones continuas en diferentes temáticas y especialidades
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

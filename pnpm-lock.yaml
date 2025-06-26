@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/open-sans':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@lucide/astro':
+        specifier: ^0.523.0
+        version: 0.523.0(astro@5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.0)(typescript@5.8.3))
       '@tailwindcss/vite':
         specifier: ^4.1.10
         version: 4.1.10(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1))
@@ -224,6 +230,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource-variable/open-sans@5.2.6':
+    resolution: {integrity: sha512-O596UvQZ7KkR8yDJWIP8UZZoqs0DHpYsrL0Szml0/EkrJ35HcMIM3bJ3sSAIAjWsBSqKgzV2HJEIuhvxBd1iog==}
+
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -350,6 +359,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lucide/astro@0.523.0':
+    resolution: {integrity: sha512-F+Ofc7VHgeUiROU8NFNAPOn3Mz7QAM41vBWDWz0cM27W6vKnAj7DcGaS1BHOEsH3aWmZLPuRFf3cMOHKQm2w7Q==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -1908,6 +1922,8 @@ snapshots:
   '@esbuild/win32-x64@0.25.5':
     optional: true
 
+  '@fontsource-variable/open-sans@5.2.6': {}
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -2003,6 +2019,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@lucide/astro@0.523.0(astro@5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.0)(typescript@5.8.3))':
+    dependencies:
+      astro: 5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.0)(typescript@5.8.3)
 
   '@oslojs/encoding@1.1.0': {}
 
