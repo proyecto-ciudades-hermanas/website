@@ -1,6 +1,7 @@
 ---
 // ProjectSection component - Sección del proyecto principal
 import { User } from '@lucide/astro'
+import { Image } from 'astro:assets'
 ---
 
 <section id="proyecto" class="section-padding">
@@ -37,17 +38,34 @@ import { User } from '@lucide/astro'
             <div class="bg-primary-blue/10 p-3 rounded-full">
               <User size={32} class="text-primary-blue" />
             </div>
-          </div>
-          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+          </div>          <h5 class="text-xl font-semibold text-gray-800 mb-2">
             Rodrigo Machado Erazo
           </h5>
           <p class="text-gray-600">Co-gestor del Proyecto</p>
         </div>
       </div>
     </div>
+    
+    <!-- Agradecimiento Especial -->
+    <div class="bg-gradient-to-r from-primary-blue/10 to-primary-red/10 rounded-2xl p-8 mb-12 animate-fade-up">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+        <div class="bg-white p-4 rounded-full shadow-md">
+          <div class="text-4xl">🎖️</div>
+        </div>
+        <div class="text-center md:text-left">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-2">Agradecimiento Especial</h4>
+          <p class="text-lg text-gray-600 max-w-2xl">
+            Extendemos nuestro más sincero agradecimiento al <span class="font-semibold">Director de Derechos Humanos de Canadá y Estados Unidos</span>, 
+            <span class="text-primary-blue font-bold">Doctor Néstor Ramírez</span>, 
+            cuya valiosa colaboración y apoyo fueron fundamentales para la realización de este convenio 
+            entre las ciudades hermanas. <span class="inline-flex items-center">🇺🇸<span class="mx-1">·</span>🇪🇨</span>
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Boletín Informativo -->
     <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-      <h4 class="text-2xl font-semibold mb-6 text-center text-gray-800">
+      <h4 class="text-3xl font-semibold mb-6 text-center text-gray-800">
         📰 Boletín Informativo Oficial
       </h4>
       <div class="text-center">
@@ -55,10 +73,12 @@ import { User } from '@lucide/astro'
           Conoce los detalles oficiales del acuerdo entre Newark y Chunchi
         </p>
         <div class="max-w-4xl mx-auto">
-          <img
+          <Image
             src="/imagenes/boletin.webp"
             alt="Boletín Informativo - Acuerdo Newark-Chunchi"
-            class="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width={800}
+            height={1000}
+            class="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 contrast-125"
           />
         </div>
       </div>
@@ -68,9 +88,8 @@ import { User } from '@lucide/astro'
     <div>
       <h4 class="text-3xl font-bold mb-8 text-center text-gray-800">
         Proyectos Contemplados en el Convenio
-      </h4>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card p-6 hover:shadow-lg transition-all">
+      </h4>      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up">
           <div class="text-primary-blue text-3xl mb-4">🎓</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Intercambios Educativos
@@ -80,7 +99,7 @@ import { User } from '@lucide/astro'
             ciudades
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.1s;">
           <div class="text-primary-green text-3xl mb-4">🏺</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Productivos
@@ -89,7 +108,7 @@ import { User } from '@lucide/astro'
             Desarrollo de proyectos productivos y artesanales locales
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.2s;">
           <div class="text-primary-blue text-3xl mb-4">🌱</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Ecológicos
@@ -98,7 +117,7 @@ import { User } from '@lucide/astro'
             Iniciativas de protección del medio ambiente y sostenibilidad
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.1s;">
           <div class="text-primary-red text-3xl mb-4">🏖️</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Turísticos
@@ -107,7 +126,7 @@ import { User } from '@lucide/astro'
             Promoción del turismo y desarrollo de destinos turísticos
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.2s;">
           <div class="text-primary-green text-3xl mb-4">📦</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Exportaciones
@@ -116,7 +135,7 @@ import { User } from '@lucide/astro'
             Facilitación de exportaciones y comercio internacional
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all">
+        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.3s;">
           <div class="text-primary-blue text-3xl mb-4">📚</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Capacitaciones
