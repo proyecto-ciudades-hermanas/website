@@ -1,51 +1,53 @@
 ---
-// SupportSection component - Sección "Con el Apoyo de"
+import { Image } from "astro:assets";
+
+const supportLogos = [
+  {
+    src: "/imagenes/cadhu-logo.jpeg",
+    alt: "CADHU",
+    delay: 0
+  },
+  {
+    src: "/imagenes/cce-logo.jpeg",
+    alt: "CCE",
+    delay: 0.1
+  },
+  {
+    src: "/imagenes/chunchi-gad-logo.jpeg",
+    alt: "Chunchi GAD",
+    delay: 0.2
+  },
+  {
+    src: "/imagenes/city-of-newark-logo.jpeg",
+    alt: "City of Newark",
+    delay: 0.3
+  }
+];
 ---
 
 <section class="section-padding bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
       Con el Apoyo de
-    </h3>    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-      <div
-        class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-      >
-        <img
-          src="/imagenes/cadhu-logo.jpeg"
-          alt="CADHU"
-          class="h-24 w-auto mx-auto"
-        />
-      </div>
-      <div
-        class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-        style="animation-delay: 0.1s;"
-      >
-        <img
-          src="/imagenes/cce-logo.jpeg"
-          alt="CCE"
-          class="h-24 w-auto mx-auto"
-        />
-      </div>
-      <div
-        class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-        style="animation-delay: 0.2s;"
-      >
-        <img
-          src="/imagenes/chunchi-gad-logo.jpeg"
-          alt="Chunchi GAD"
-          class="h-24 w-auto mx-auto"
-        />
-      </div>
-      <div
-        class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-up"
-        style="animation-delay: 0.3s;"
-      >
-        <img
-          src="/imagenes/city-of-newark-logo.jpeg"
-          alt="City of Newark"
-          class="h-24 w-auto mx-auto"
-        />
-      </div>
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+      {
+        supportLogos.map((logo) => (
+          <div
+            class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-up"
+            style={`animation-delay: ${logo.delay}s;`}
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={240}
+              height={160}
+              class="h-28 w-auto mx-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
