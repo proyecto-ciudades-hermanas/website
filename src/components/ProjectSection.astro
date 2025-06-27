@@ -1,5 +1,4 @@
 ---
-// ProjectSection component - Sección del proyecto principal
 import { User } from '@lucide/astro'
 import { Image } from 'astro:assets'
 ---
@@ -38,29 +37,78 @@ import { Image } from 'astro:assets'
             <div class="bg-primary-blue/10 p-3 rounded-full">
               <User size={32} class="text-primary-blue" />
             </div>
-          </div>          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+          </div>
+          <h5 class="text-xl font-semibold text-gray-800 mb-2">
             Rodrigo Machado Erazo
           </h5>
           <p class="text-gray-600">Co-gestor del Proyecto</p>
         </div>
       </div>
     </div>
-    
-    <!-- Agradecimiento Especial -->
-    <div class="bg-gradient-to-r from-primary-blue/10 to-primary-red/10 rounded-2xl p-8 mb-12 animate-fade-up">
-      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-        <div class="bg-white p-4 rounded-full shadow-md">
-          <div class="text-4xl">🎖️</div>
+
+    <!-- Impulsadores del Proyecto -->
+    <div
+      class="bg-gradient-to-r from-primary-blue/10 to-primary-red/10 rounded-2xl p-8 mb-12 animate-fade-up"
+    >
+      <h4 class="text-2xl font-semibold text-center text-gray-800 mb-6">
+        Impulsadores y Base Fundamental del Proyecto
+      </h4>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Dr. Néstor Ramírez -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-4 bg-white/50 p-6 rounded-xl shadow-sm"
+        >
+          <div
+            class="bg-primary-blue/10 p-4 rounded-full shadow-md flex-shrink-0"
+          >
+            <User size={32} class="text-primary-red" />
+          </div>
+          <div class="text-center md:text-left">
+            <h5 class="text-xl font-bold text-primary-blue mb-1">
+              Dr. Néstor Ramírez V.
+            </h5>
+            <p class="text-gray-700 font-medium">
+              Director General de los Derechos Humanos de EEUU y Canadá
+            </p>
+            <p class="text-gray-600 mt-2 text-sm">
+              Su invaluable apoyo institucional y compromiso fueron
+              determinantes para establecer los vínculos iniciales entre ambas
+              ciudades.
+            </p>
+          </div>
         </div>
-        <div class="text-center md:text-left">
-          <h4 class="text-2xl font-semibold text-gray-800 mb-2">Agradecimiento Especial</h4>
-          <p class="text-lg text-gray-600 max-w-2xl">
-            Extendemos nuestro más sincero agradecimiento al <span class="font-semibold">Director de Derechos Humanos de Canadá y Estados Unidos</span>, 
-            <span class="text-primary-blue font-bold">Doctor Néstor Ramírez</span>, 
-            cuya valiosa colaboración y apoyo fueron fundamentales para la realización de este convenio 
-            entre las ciudades hermanas. <span class="inline-flex items-center">🇺🇸<span class="mx-1">·</span>🇪🇨</span>
-          </p>
+
+        <!-- Sr. Patricio Portilla -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-4 bg-white/50 p-6 rounded-xl shadow-sm"
+        >
+          <div
+            class="bg-primary-red/10 p-4 rounded-full shadow-md flex-shrink-0"
+          >
+            <User size={32} class="text-primary-red" />
+          </div>
+          <div class="text-center md:text-left">
+            <h5 class="text-xl font-bold text-primary-red mb-1">
+              Sr. Patricio Portilla Zambrano
+            </h5>
+            <p class="text-gray-700 font-medium">
+              Filántropo Chuncheño en EEUU
+            </p>
+            <p class="text-gray-600 mt-2 text-sm">
+              Su generoso espíritu de servicio y compromiso con su tierra natal
+              han sido esenciales para materializar esta iniciativa.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <p class="text-gray-600">
+          Extendemos nuestro más sincero agradecimiento por su valiosa
+          colaboración y compromiso con este importante proyecto de cooperación
+          internacional.
+        </p>
       </div>
     </div>
     <!-- Boletín Informativo -->
@@ -88,7 +136,8 @@ import { Image } from 'astro:assets'
     <div>
       <h4 class="text-3xl font-bold mb-8 text-center text-gray-800">
         Proyectos Contemplados en el Convenio
-      </h4>      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      </h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="card p-6 hover:shadow-lg transition-all animate-fade-up">
           <div class="text-primary-blue text-3xl mb-4">🎓</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
@@ -99,7 +148,10 @@ import { Image } from 'astro:assets'
             ciudades
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.1s;">
+        <div
+          class="card p-6 hover:shadow-lg transition-all animate-fade-up"
+          style="animation-delay: 0.1s;"
+        >
           <div class="text-primary-green text-3xl mb-4">🏺</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Productivos
@@ -108,7 +160,10 @@ import { Image } from 'astro:assets'
             Desarrollo de proyectos productivos y artesanales locales
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.2s;">
+        <div
+          class="card p-6 hover:shadow-lg transition-all animate-fade-up"
+          style="animation-delay: 0.2s;"
+        >
           <div class="text-primary-blue text-3xl mb-4">🌱</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Ecológicos
@@ -117,7 +172,10 @@ import { Image } from 'astro:assets'
             Iniciativas de protección del medio ambiente y sostenibilidad
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.1s;">
+        <div
+          class="card p-6 hover:shadow-lg transition-all animate-fade-up"
+          style="animation-delay: 0.1s;"
+        >
           <div class="text-primary-red text-3xl mb-4">🏖️</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Turísticos
@@ -126,7 +184,10 @@ import { Image } from 'astro:assets'
             Promoción del turismo y desarrollo de destinos turísticos
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.2s;">
+        <div
+          class="card p-6 hover:shadow-lg transition-all animate-fade-up"
+          style="animation-delay: 0.2s;"
+        >
           <div class="text-primary-green text-3xl mb-4">📦</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Exportaciones
@@ -135,7 +196,10 @@ import { Image } from 'astro:assets'
             Facilitación de exportaciones y comercio internacional
           </p>
         </div>
-        <div class="card p-6 hover:shadow-lg transition-all animate-fade-up" style="animation-delay: 0.3s;">
+        <div
+          class="card p-6 hover:shadow-lg transition-all animate-fade-up"
+          style="animation-delay: 0.3s;"
+        >
           <div class="text-primary-blue text-3xl mb-4">📚</div>
           <h5 class="text-lg font-semibold mb-3 text-gray-800">
             Capacitaciones
