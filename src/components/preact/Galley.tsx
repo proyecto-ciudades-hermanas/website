@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks';
+import { SubtitleReact } from './SubtitleReact';
 
 export function Gallery() {
   const imageCount = 13; // Total de imágenes en la galería
@@ -32,7 +33,7 @@ export function Gallery() {
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Galería de Imágenes</h2>
+      <SubtitleReact text="Galería de Imágenes" />
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {galleryImages.slice(0, visibleImages).map((image, index) => (
