@@ -32,7 +32,7 @@ export function Gallery() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <section id="galeria" className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <SubtitleReact text="Galería de Imágenes" />
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -88,6 +88,6 @@ export function Gallery() {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

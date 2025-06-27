@@ -15,7 +15,8 @@
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.10.1",
     "preact": "^10.26.9",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.10",
+    "tailwindcss-animated": "^2.0.0"
   },
   "devDependencies": {
     "prettier": "^3.6.0",

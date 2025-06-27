@@ -1,7 +1,7 @@
 ---
 import { User } from '@lucide/astro'
-import { Image } from 'astro:assets'
 import Subtitle from './Subtitle.astro'
+import InteractiveImage from './InteractiveImage.astro'
 ---
 
 <section id="proyecto" class="section-padding">
@@ -120,12 +120,11 @@ import Subtitle from './Subtitle.astro'
           Conoce los detalles oficiales del acuerdo entre Newark y Chunchi
         </p>
         <div class="max-w-4xl mx-auto">
-          <Image
-            src="/imagenes/boletin.webp"
-            alt="Boletín Informativo - Acuerdo Newark-Chunchi"
+          <InteractiveImage
+            imageSrc="/imagenes/boletin.webp"
+            imageAlt="Boletín Informativo - Acuerdo Newark-Chunchi"
             width={800}
             height={1000}
-            class="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 contrast-125"
           />
         </div>
       </div>

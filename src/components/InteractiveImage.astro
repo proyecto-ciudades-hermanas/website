@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  width: number;
+  height: number;
+}
+
+const { imageSrc, imageAlt, width, height } = Astro.props;
+---
+
+<div class="image-modal-container">
+  <button
+    type="button"
+    id="open-modal-btn"
+    class="w-full bg-transparent border-0 p-0 cursor-pointer"
+    aria-label={`Ver ${imageAlt} en tamaño completo`}
+  >
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      width={width}
+      height={height}
+      class="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 contrast-125"
+    />
+    <span class="sr-only">Abrir {imageAlt} en tamaño completo</span>
+  </button>
+
+  <div id="image-modal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden">
+    <div class="relative max-w-5xl max-h-[90vh] flex items-center justify-center h-full">
+      <button
+        type="button"
+        id="close-modal-btn"
+        class="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300 hover:cursor-pointer"
+        aria-label="Cerrar modal"
+      >
+        &times;
+      </button>
+      <Image
+        src={imageSrc}
+        alt={imageAlt}
+        width={width}
+        height={height}
+        class="max-w-full max-h-[80vh] object-contain rounded"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupModal() {
+    const openBtn = document.getElementById('open-modal-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const modal = document.getElementById('image-modal');
+
+    if (openBtn && closeBtn && modal) {
+      openBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex', 'items-center', 'justify-center');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex', 'items-center', 'justify-center');
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex', 'items-center', 'justify-center');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex', 'items-center', 'justify-center');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', setupModal);
+  document.addEventListener('astro:page-load', setupModal);
+</script>
