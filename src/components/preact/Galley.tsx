@@ -33,8 +33,10 @@ export function Gallery() {
 
   return (
     <section id="galeria" className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <SubtitleReact text="Galería de Imágenes" />
-      
+      <SubtitleReact text="Galería" />
+      <p className="text-center text-gray-600 mb-6">
+        Explora nuestra galería de imágenes del proyecto Ciudades Hermanas.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {galleryImages.slice(0, visibleImages).map((image, index) => (
           <button 

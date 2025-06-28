@@ -1,6 +1,7 @@
 ---
 // ContactSection component - Sección de contacto
 import Subtitle from './Subtitle.astro'
+import { Image } from 'astro:assets'
 ---
 
 <section id="contacto" class="py-20 mt-10 bg-gradient-main text-white">
@@ -10,7 +11,7 @@ import Subtitle from './Subtitle.astro'
     >
       Contacto
     </h2>
-    
+
     <!-- Información de Contacto de los Gestores -->
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Sandra Aguirre Solórzano - Newark -->
@@ -19,9 +20,15 @@ import Subtitle from './Subtitle.astro'
       >
         <div class="text-center mb-6">
           <div
-            class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-24 h-24 rounded-full overflow-hidden border-2 border-white/30 mx-auto mb-4"
           >
-            <span class="text-2xl">🇺🇸</span>
+            <Image 
+              src="/imagenes/encargados/Sandra-Aguirre.jpeg" 
+              alt="Sandra Elizabeth Aguirre Solórzano" 
+              width={200} 
+              height={200} 
+              class="w-full h-full object-cover"
+            />
           </div>
           <h4 class="text-2xl font-bold mb-2">
             Sandra Elizabeth Aguirre Solórzano
@@ -73,9 +80,15 @@ import Subtitle from './Subtitle.astro'
       >
         <div class="text-center mb-6">
           <div
-            class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-24 h-24 rounded-full overflow-hidden border-2 border-white/30 mx-auto mb-4 relative"
           >
-            <span class="text-2xl">🇪🇨</span>
+            <Image 
+              src="/imagenes/encargados/Rodrigo-Machado.jpeg" 
+              alt="Rodrigo Machado Erazo" 
+              width={200} 
+              height={200} 
+              class="w-full h-full object-cover"
+            />
           </div>
           <h4 class="text-2xl font-bold mb-2">Rodrigo Machado Erazo</h4>
           <p class="text-white/80 text-lg">Co-gestor del Proyecto</p>
