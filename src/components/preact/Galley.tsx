@@ -2,33 +2,29 @@ import { useState } from 'preact/hooks';
 import { SubtitleReact } from './SubtitleReact';
 
 export function Gallery() {
-  const imageCount = 13; // Total de imágenes en la galería
-  const initialImageCount = 8; // Número inicial de imágenes a mostrar
+  const imageCount = 13;
+  const initialImageCount = 8;
 
   const [visibleImages, setVisibleImages] = useState(initialImageCount);
   const [modalImage, setModalImage] = useState<string | null>(null);
 
-  // Generar array de rutas de imágenes
   const galleryImages = Array.from({ length: imageCount }, (_, i) => ({
-    src: `/imagenes/galeria/Imagen-${i + 1}.jpeg`,
+    src: `/imagenes/galeria/Imagen-${i + 1}.webp`,
     alt: `Imagen ${i + 1}`
   }));
 
-  // Mostrar todas las imágenes
   const handleShowMore = () => {
     setVisibleImages(imageCount);
   };
 
-  // Abrir modal con imagen
   const openModal = (imageSrc: string) => {
     setModalImage(imageSrc);
-    document.body.style.overflow = 'hidden'; // Prevenir scroll cuando el modal está abierto
+    document.body.style.overflow = 'hidden';
   };
 
-  // Cerrar modal
   const closeModal = () => {
     setModalImage(null);
-    document.body.style.overflow = ''; // Restaurar scroll
+    document.body.style.overflow = '';
   };
 
   return (
