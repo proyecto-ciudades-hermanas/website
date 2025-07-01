@@ -58,7 +58,7 @@ export function Gallery() {
         <div className="flex justify-center mt-8">
           <button 
             type="button"
-            className="px-6 py-2.5 bg-blue-500 text-white rounded-md font-medium transition-colors duration-300 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-black/85 focus:ring-opacity-50 hover:cursor-pointer " 
+            className="btn-primary px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300" 
             onClick={handleShowMore}
           >
             Ver más imágenes

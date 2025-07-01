@@ -16,9 +16,9 @@ import { Image } from 'astro:assets'
     </div>
     <!-- Gestores del Proyecto -->
     <div class="bg-primary-blue/5 rounded-2xl p-8 mb-12">
-      <h4 class="text-2xl font-semibold mb-6 text-center text-primary-blue">
+      <h3 class="text-2xl font-semibold mb-6 text-center text-primary-blue">
         Gestores del Proyecto
-      </h4>
+      </h3>
       <div class="grid md:grid-cols-2 gap-8 text-center">
         <div class="bg-white p-6 rounded-xl shadow-sm">
           <div class="flex items-center justify-center mb-4">
@@ -34,9 +34,9 @@ import { Image } from 'astro:assets'
               />
             </div>
           </div>
-          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">
             Sandra Aguirre Solórzano
-          </h5>
+          </h4>
           <p class="text-gray-600">Artista Plástica Chuncheña</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow-sm">
@@ -53,9 +53,9 @@ import { Image } from 'astro:assets'
               />
             </div>
           </div>
-          <h5 class="text-xl font-semibold text-gray-800 mb-2">
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">
             Rodrigo Machado Erazo
-          </h5>
+          </h4>
           <p class="text-gray-600">Co-gestor del Proyecto</p>
         </div>
       </div>
@@ -65,9 +65,9 @@ import { Image } from 'astro:assets'
     <div
       class="bg-gradient-to-r from-primary-blue/10 to-primary-red/10 rounded-2xl p-8 mb-12 animate-fade-up"
     >
-      <h4 class="text-2xl font-semibold text-center text-gray-800 mb-6">
+      <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">
         Impulsadores y Base Fundamental del Proyecto
-      </h4>
+      </h3>
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Dr. Néstor Ramírez -->
@@ -86,9 +86,9 @@ import { Image } from 'astro:assets'
             />
           </div>
           <div class="text-center md:text-left">
-            <h5 class="text-xl font-bold text-primary-blue mb-1">
+            <h4 class="text-xl font-bold text-primary-blue mb-1">
               Dr. Néstor Ramírez V.
-            </h5>
+            </h4>
             <p class="text-gray-700 font-medium">
               Director General de los Derechos Humanos de EEUU y Canadá
             </p>
@@ -116,9 +116,9 @@ import { Image } from 'astro:assets'
             />
           </div>
           <div class="text-center md:text-left">
-            <h5 class="text-xl font-bold text-primary-red mb-1">
+            <h4 class="text-xl font-bold text-primary-red mb-1">
               Sr. Patricio Portilla Zambrano
-            </h5>
+            </h4>
             <p class="text-gray-700 font-medium">
               Filántropo Chuncheño en EEUU
             </p>
@@ -140,11 +140,9 @@ import { Image } from 'astro:assets'
     </div>
     <!-- Boletín Informativo -->
     <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-      <h4 class="text-3xl font-semibold mb-6 text-center text-gray-800">
-        📰 Boletín Informativo Oficial
-      </h4>
+      <Subtitle text="📰 Boletín Informativo Oficial" />
       <div class="text-center">
-        <p class="text-gray-600 mb-6">
+        <p class="text-gray-600 mb-10">
           Conoce los detalles oficiales del acuerdo entre Newark y Chunchi
         </p>
         <div class="max-w-4xl mx-auto">
@@ -160,15 +158,13 @@ import { Image } from 'astro:assets'
 
     <!-- Proyectos del Convenio -->
     <div>
-      <h4 class="text-3xl font-bold mb-8 text-center text-gray-800">
-        Proyectos Contemplados en el Convenio
-      </h4>
+      <Subtitle text="Proyectos Contemplados en el Convenio" />
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="card p-6 hover:shadow-lg transition-all animate-fade-up">
           <div class="text-primary-blue text-3xl mb-4">🎓</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Intercambios Educativos
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Intercambios educativos, culturales y científicos entre ambas
             ciudades
@@ -179,9 +175,9 @@ import { Image } from 'astro:assets'
           style="animation-delay: 0.1s;"
         >
           <div class="text-primary-green text-3xl mb-4">🏺</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Productivos
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Desarrollo de proyectos productivos y artesanales locales
           </p>
@@ -191,9 +187,9 @@ import { Image } from 'astro:assets'
           style="animation-delay: 0.2s;"
         >
           <div class="text-primary-blue text-3xl mb-4">🌱</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Ecológicos
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Iniciativas de protección del medio ambiente y sostenibilidad
           </p>
@@ -203,9 +199,9 @@ import { Image } from 'astro:assets'
           style="animation-delay: 0.1s;"
         >
           <div class="text-primary-red text-3xl mb-4">🏖️</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Proyectos Turísticos
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Promoción del turismo y desarrollo de destinos turísticos
           </p>
@@ -215,9 +211,9 @@ import { Image } from 'astro:assets'
           style="animation-delay: 0.2s;"
         >
           <div class="text-primary-green text-3xl mb-4">📦</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Exportaciones
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Facilitación de exportaciones y comercio internacional
           </p>
@@ -227,9 +223,9 @@ import { Image } from 'astro:assets'
           style="animation-delay: 0.3s;"
         >
           <div class="text-primary-blue text-3xl mb-4">📚</div>
-          <h5 class="text-lg font-semibold mb-3 text-gray-800">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800">
             Capacitaciones
-          </h5>
+          </h3>
           <p class="text-gray-600">
             Capacitaciones continuas en diferentes temáticas y especialidades
           </p>
