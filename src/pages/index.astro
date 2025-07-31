@@ -12,9 +12,13 @@ import { Gallery } from '../components/preact/Galley'
 ---
 
 <Layout>
-  <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid place-items-center min-h-dvh">
-    <p class="text-center">
-      <span class="text-red-500">Oops Something went wrong!</span> Please contact with the developer of the page.
-    </p>
-  </div>
+  <Header />
+  <Hero />
+  <SupportSection />
+  <ProjectSection />
+  <MissionVisionSection />
+  <Gallery client:visible />
+  <ContactSection />
+  <Footer />
+  <PageAnimations />
 </Layout>
